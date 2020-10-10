@@ -1,0 +1,74 @@
+/* CSS for the Simons board */
+body {
+    text-align: center;
+    background-color: #fafaed;
+  }
+  
+  #level-title {
+    font-family: 'Press Start 2P', cursive;
+    font-size: 3rem;
+    margin:  5%;
+    color: #000000;
+  }
+  
+  .container {
+    display: block;
+    width: 50%;
+    margin: auto;
+  
+  }
+  
+  .btn {
+    margin: 25px;
+    display: inline-block;
+    height: 200px;
+    width: 200px;
+    border: 10px solid black;
+    border-radius: 20%;
+  }
+  
+  .game-over {
+    background-color: red;
+    opacity: 0.8;
+  }
+  
+  .red {
+    background-color: red;
+  }
+  
+  .green {
+    background-color: #48d80d;
+  }
+  
+  .blue {
+    background-color: blue;
+  }
+  
+  .skyblue{
+      background-color: #c6e2ff;
+  }
+
+  .yellow {
+    background-color: yellow;
+  }
+
+  .pink{
+      background-color: #ff0067;
+  }
+
+  .lightorange{
+      background-color: #ffdfbb;
+  }
+
+  .orange{
+      background-color: orange;
+  }
+  
+  .purple{
+      background-color: #b4a5ff;
+  }
+  .pressed {
+    box-shadow: 0 0 20px white;
+    background-color: grey;
+  }
+  
