@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Simons Game</title>
+        <meta charset="utf-8">
+        <!-- <link rel="stylesheet" href=""> -->
+    </head>
+    <body>
+        <h1>Simons Game</h1>
+        <p>by Andy Hong and Steve Lee, CS380</p>
+        <form href="./game.html" id="name-form">
+            <label for="name">Your Name:</label>
+            <input type="text" id="name" name="name">
+        </form>
+        <div class="how-to">
+            <img src="./cancel-black-18dp.svg">
+            <section class="intro">
+                <h2>What is Simons Game?</h2>
+                <p>
+                    Simons game is a memory game played with 3x3 tiles.
+                    Test your memory and see how far you can make it!
+                </p>
+            </section>
+            <section class="game-play">
+                <h2>Game Play</h2>
+                <p>
+                    There are 9 tiles, laid out in a 3x3 fashion. At the beginning of each round, a random tile blinks.
+                    The player must remember the blinking pattern in order from the first round, and then press the tiles in the correct seqeunce.
+                    For example, if a green tile blinked in the first round and a blue tile blinked in the second round, the player in round 2 should tap the green tile, then the blue tile.
+                </p>
+            </section>
+            <section class="rules">
+                <h2>Rules</h2>
+                <ul>
+                    <li>You get two lives per game.</li>
+                    <li>Pressing the wrong tile costs a life, and you have to start over in your sequence.</li> <!-- do we want them to start over?-->
+                    <li>Time limit?</li>
+                    <li>The game is over when you are out of lives.</li>
+                    <li>After finishing a round, you have up to 10 seconds to go on to the next round. After 10 seconds, the next round automatically starts.</li>
+                    <li>If you mess up, you get once chance to review the sequence. You must choose this option within 10 seconds before moving on.</li>
+                </ul>
+            </section>
+        </div>
+        <button type="submit" form="name-form">Start</button>
+        <button type="button" id="how-button">How to Play</button>
+        <button type="button" id="leader-button">Leaderboard</button>
+        <!-- showing instructions: https://stackoverflow.com/questions/8764399/how-to-position-the-div-popup-dialog-to-the-center-of-browser-screen -->
+        <script src="./start.js"></script>
+    </body>
+</html>
