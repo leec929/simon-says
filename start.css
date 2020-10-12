@@ -1,0 +1,32 @@
+body {
+    max-width: 1000px;
+    margin: 20px auto;
+    padding: 50px;
+}
+
+#how-to-wrapper {
+    position: absolute;
+    top: 10%;
+    left: 50%;
+    bottom: 10%;
+    height: 80%;
+    transform: translate(-50%, 0%);
+    transition: visibilty 1s, opacity 0.5s linear;
+}
+
+.how-to {
+    background-color: #F4D6F4;
+    padding: 14px;
+    position: relative;
+    width: 800px;
+    margin: 0 auto;
+}
+
+.close-btn {
+    position: absolute;
+    top:14px; right: 14px;
+}
+
+.close-btn:hover {
+    cursor: pointer;
+}
