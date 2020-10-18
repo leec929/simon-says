@@ -1,16 +1,55 @@
+h1 {
+    /* font-family: 'Press Start 2P', cursive; */
+    font-family: 'Neucha', cursive;
+    font-size: 80px;
+    margin: 0;
+    text-align: center;
+}
+
 body {
     max-width: 1000px;
     margin: 20px auto;
     padding: 50px;
 }
 
+.makers {
+    text-align: center;
+    margin: 0;
+    font-family: 'Chilanka', cursive;
+}
+
+form {
+    max-width: fit-content;
+    margin: 0 auto;
+    text-align: center;
+}
+
+.formlabel {
+    font-family: 'Press Start 2P', cursive;
+    font-size: 30px;
+}
+
+.nameinput {
+    height: 50px;
+    max-width: 450px;
+    text-align: center;
+    font-size: 45px;
+    font-family: 'Neucha', cursive;
+    margin-top: 10px;
+}
+
+hr {
+    max-width: 800px;
+    margin: 50px auto;
+}
+
 #how-to-wrapper {
     position: absolute;
-    top: 10%;
-    left: 50%;
-    bottom: 10%;
     height: 80%;
-    transform: translate(-50%, 0%);
+    top: 10%;
+    bottom: 10%;
+    left: 50%;
+    transform: translate(-50%, 0%); /* To center horiozntally */
     transition: visibilty 1s, opacity 0.5s linear;
 }
 
@@ -29,4 +68,28 @@ body {
 
 .close-btn:hover {
     cursor: pointer;
+}
+
+button {
+    font-family: 'Chilanka', cursive;
+    width: 150px;
+    height: 50px;
+    font-size: 18px;
+    margin: 0 auto;
+}
+
+.buttons {
+    display: flex;
+    justify-content: space-around;
+    flex-direction: row;
+}
+
+@media screen and (max-width: 650px) {
+    .buttons {
+        flex-direction: column;
+    }
+
+    button {
+        margin-bottom: 24px;
+    }
 }

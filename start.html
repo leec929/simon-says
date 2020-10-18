@@ -4,14 +4,27 @@
         <title>Simons Game</title>
         <meta charset="utf-8">
         <link rel="stylesheet" href="start.css">
+        <link href="https://fonts.googleapis.com/css?family=Press+Start+2P" rel="stylesheet">
+        <link href="https://fonts.googleapis.com/css2?family=Chilanka&display=swap" rel="stylesheet">
+        <link href="https://fonts.googleapis.com/css2?family=Neucha&display=swap" rel="stylesheet">
     </head>
     <body>
-        <h1>Simons Game</h1>
-        <p>by Andy Hong and Steve Lee, CS380</p>
+        <section class="gametitle">
+            <h1>Simons Game</h1>
+            <p class="makers">by Andy Hong and Steve Lee, CS380</p>
+        </section>
+        <hr>
         <form action="./game.html" id="name-form" method="POST">
-            <label for="name">Your Name:</label>
-            <input type="text" id="name" name="name">
+            <label for="name" class="formlabel">Enter Your Name</label>
+            <br>
+            <input type="text" id="name" name="name" class="nameinput">
         </form>
+        <hr>
+        <div class="buttons">
+            <button type="submit" form="name-form">Start</button>
+            <button type="button" id="how-button">How to Play</button>
+            <button type="button" id="leader-button">Leaderboard</button>
+        </div>
         <div class="how-to-wrapper" id="how-to-wrapper" style="visibility: hidden; opacity: 0;">
             <div class="how-to">
                 <img class="close-btn" id="close-button" src="./cancel-black-18dp.svg">
@@ -43,9 +56,7 @@
                 </section>
             </div>
         </div>
-        <button type="submit" form="name-form">Start</button>
-        <button type="button" id="how-button">How to Play</button>
-        <button type="button" id="leader-button">Leaderboard</button>
+
         <!-- showing instructions: https://stackoverflow.com/questions/8764399/how-to-position-the-div-popup-dialog-to-the-center-of-browser-screen -->
         <script src="./start.js"></script>
     </body>
