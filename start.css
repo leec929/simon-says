@@ -1,5 +1,4 @@
 h1 {
-    /* font-family: 'Press Start 2P', cursive; */
     font-family: 'Neucha', cursive;
     font-size: 80px;
     margin: 0;
@@ -15,7 +14,15 @@ body {
 .makers {
     text-align: center;
     margin: 0;
+}
+
+h2 {
+    font-family: 'Neucha', cursive;
+}
+
+p, li {
     font-family: 'Chilanka', cursive;
+    line-height: 1.6;
 }
 
 form {
@@ -55,7 +62,7 @@ hr {
 
 .how-to {
     background-color: #F4D6F4;
-    padding: 14px;
+    padding: 20px;
     position: relative;
     width: 800px;
     margin: 0 auto;
