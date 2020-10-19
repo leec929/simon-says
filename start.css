@@ -48,7 +48,8 @@ form {
 
 hr {
     max-width: 800px;
-    margin: 50px auto;
+    margin: 150px auto;
+    visibility: hidden;
 }
 
 #how-to-wrapper {

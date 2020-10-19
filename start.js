@@ -5,6 +5,8 @@ document.getElementById("leader-button").addEventListener("click", function() {
     alert("TODO");
 })
 
+document.getElementById("start-button").addEventListener("click", function() { location.href = "./game.html"; })
+
 addEventListener('keydown', function(e) {
     // console.log("Key pressed was " + e.key);
     if(e.key == "Escape") {
