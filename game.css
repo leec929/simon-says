@@ -1,14 +1,17 @@
 /* CSS for the Simons board */
 body {
     text-align: center;
-    background-color: #fafaed;
+    background-color: #264653;
   }
+h2{
+  color: #fffffc
+}
   
   #level-title {
     font-family: 'Press Start 2P', cursive;
     font-size: 3rem;
     margin:  5%;
-    color: #000000;
+    color: #fffffc;
   }
   
   .container {
@@ -31,7 +34,14 @@ body {
     background-color: red;
     opacity: 0.8;
   }
+
+  .pressed {
+    box-shadow: 0 0 20px white;
+    background-color: grey;
+  }
   
+
+  /* button colors */
   .red {
     background-color: red;
   }
@@ -44,8 +54,8 @@ body {
     background-color: blue;
   }
   
-  .skyblue{
-      background-color: #c6e2ff;
+  .cyan{
+      background-color: #00FFFF;
   }
 
   .yellow {
@@ -56,7 +66,7 @@ body {
       background-color: #ff0067;
   }
 
-  .lightorange{
+  .ivory{
       background-color: #ffdfbb;
   }
 
@@ -67,8 +77,4 @@ body {
   .purple{
       background-color: #b4a5ff;
   }
-  .pressed {
-    box-shadow: 0 0 20px white;
-    background-color: grey;
-  }
-  
+
