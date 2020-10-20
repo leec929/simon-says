@@ -20,9 +20,9 @@ LONG;
                 echo <<<LONG
         <h2> Enter your initials </h2>
         <form id="initial-wrapper" action="./leaderboard.php" method="POST">
-            <input type="text" maxlength="1" placeholder="-" id="first-initial">
-            <input type="text" maxlength="1" placeholder="-">
-            <input type="text" maxlength="1" placeholder="-">
+            <input type="text" maxlength="1" name="first-initial" id="first-initial" placeholder="-">
+            <input type="text" maxlength="1" name="second-initial" placeholder="-">
+            <input type="text" maxlength="1" name="third-initial" placeholder="-">
 LONG;
                 echo "            <input type=\"hidden\" name=\"score\" value=\"" . $_POST["score"] . "\">";
                 // TODO: uncomment when date is sent
