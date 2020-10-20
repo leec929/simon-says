@@ -1,10 +1,6 @@
 document.getElementById("how-button").addEventListener("click", toggleInstructions)
 document.getElementById("close-button").addEventListener("click", toggleInstructions)
-
-document.getElementById("leader-button").addEventListener("click", function() {
-    alert("TODO");
-})
-
+document.getElementById("leader-button").addEventListener("click", function() {location.href="./leaderboard.php";})
 document.getElementById("start-button").addEventListener("click", function() { location.href = "./game.html"; })
 
 addEventListener('keydown', function(e) {
