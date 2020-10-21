@@ -1,4 +1,4 @@
-<!-- TODO: Make game.html make a POST request with "score" and "date" (or primary id) inputs -->
+<!-- TODO: Make game.html make a POST request with "score" and "datetime" (or primary id) inputs -->
 <!-- TODO: Style with CSS -->
 
 <!DOCTYPE html>
@@ -19,14 +19,15 @@ LONG;
             else {
                 echo <<<LONG
         <h2> Enter your initials </h2>
-        <form id="initial-wrapper" action="./leaderboard.php" method="POST">
+        <form id="initial-wrapper" action="comet.cs.brynmawr.edu/~cwlee/cs380-projects/leaderboard.php" method="POST">
             <input type="text" maxlength="1" name="first-initial" id="first-initial" placeholder="-">
             <input type="text" maxlength="1" name="second-initial" placeholder="-">
             <input type="text" maxlength="1" name="third-initial" placeholder="-">
 LONG;
                 echo "            <input type=\"hidden\" name=\"score\" value=\"" . $_POST["score"] . "\">";
-                // TODO: uncomment when date is sent
-                //echo "<input type=\"hidden\" name=\"date\" value=\"" . $_POST["date"] . "\">";
+                // TODO: uncomment when datetime is sent
+                echo "<input type=\"hidden\" name=\"datetime\" value=\"" . $_POST["datetime"] . "\">";
+                echo "<br>datetime is \"" . $_POST["datetime"] . "\"<br>";
                 echo "        </form>";
                 echo "        <h2> Your Score </h2>";
                 echo "        <p>" . $_POST["score"] . "</p>";
