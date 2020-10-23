@@ -6,7 +6,7 @@ var userPattern = [];
 var started = false;
 var level = 0;
 
-$(document).ready(aspectButtons()); // make the button height be equal to width at startup regardless of device
+$(document).ready(aspectButtons); // make the button height be equal to width at startup regardless of device
 
 $(document).keypress(function() {
     $("#endGame1").text("");
@@ -99,5 +99,5 @@ function aspectButtons() {
         bttn.style.height = getComputedStyle(bttn).width;
     }
 }
-// supposed to make the buttons 1:1 aspect ratio but not working :()
-window.addEventListener('resize', aspectButtons()); 
+// on window resize, to make the buttons 1:1 aspect ratio
+window.addEventListener('resize', aspectButtons); 
