@@ -1,8 +1,8 @@
 // referenced https://stackoverflow.com/questions/15595652/focus-next-input-once-reaching-maxlength-value
 // but modified it because I know all children are input elements
-if(document.getElementById("initial-wrapper")) {
+if(document.getElementById("initials-wrapper")) {
     document.getElementById("first-initial").focus();
-    document.getElementById("initial-wrapper").onkeyup = function(event) {
+    document.getElementById("initials-wrapper").onkeyup = function(event) {
         let target = event.target; // the item inside that was acted upon
         let isAlphaNumeral = ('0' <= event.key && event.key <= '9') || ('A' <= event.key && event.key <= 'Z') || (('a' <= event.key && event.key <= 'z'));
         if(!isAlphaNumeral) {
