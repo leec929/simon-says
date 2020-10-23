@@ -36,7 +36,7 @@ LONG;
                 echo "        <h2> Your Score </h2>";
                 echo "        <p>" . $_POST["score"] . "</p>";
                 echo "        <div class=\"buttons\">";
-                echo "            <button type=\"submit\" form=\"initial-wrapper\">Confirm</button>";
+                echo "            <button type=\"submit\" form=\"initials-wrapper\">Confirm</button>";
             }
         ?>
             <button type="button" id="return-btn">Return to Main Page</button>
