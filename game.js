@@ -6,6 +6,8 @@ var userPattern = [];
 var started = false;
 var level = 0;
 
+$(document).ready(aspectButtons()); // make the button height be equal to width at startup regardless of device
+
 $(document).keypress(function() {
     $("#endGame1").text("");
     $("#endGame2").text("");
@@ -17,13 +19,15 @@ $(document).keypress(function() {
 })
 
 $(".btn").click(function() {
-    var userChosenColor = $(this).attr("id");
-    userPattern.push(userChosenColor);
+    if(started) {
+        var userChosenColor = $(this).attr("id");
+        userPattern.push(userChosenColor);
 
-    playSound(userChosenColor);
-    animatePress(userChosenColor);
+        playSound(userChosenColor);
+        animatePress(userChosenColor);
 
-    checkAnswer(userPattern.length-1);
+        checkAnswer(userPattern.length-1);
+    }
 })
 
 function checkAnswer(currentLevel) {
@@ -37,13 +41,14 @@ function checkAnswer(currentLevel) {
         playSound("wrong");
         $("body").addClass("game-over");
         $("#level-title").text("Game Over. Press Any Key to Restart");
-        $("#endGame1").text("The correct sequence is: " + gamePattern.toString());
-        $("#endGame2").text("Your selected seuence is: " + userPattern.toString());
+        $("#endGame1").text("The correct sequence is: " + gamePattern.join(', '));
+        $("#endGame2").text("Your selected sequence is: " + userPattern.join(', '));
 
         setTimeout(function() {
             $("body").removeClass("game-over");
         }, 200);
 
+        // document.addEventListener() // add keydown event listener which should be removed in startover.
         startOver();
     }
 }
@@ -87,3 +92,12 @@ function startOver() {
 //         started = true;
 //     }
 // })
+
+function aspectButtons() {
+    let buttons = document.querySelectorAll('.btn');
+    for(bttn of buttons) {
+        bttn.style.height = getComputedStyle(bttn).width;
+    }
+}
+// supposed to make the buttons 1:1 aspect ratio but not working :()
+window.addEventListener('resize', aspectButtons()); 
