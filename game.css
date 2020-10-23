@@ -3,15 +3,24 @@ body {
     text-align: center;
     background-color: #264653;
   }
+  
 h2{
-  color: #fffffc
+  color: #fffffc;
+  font-family: 'Neucha', cursive;
 }
   
   #level-title {
     font-family: 'Press Start 2P', cursive;
     font-size: 3rem;
-    margin:  5%;
+    margin: 5%;
     color: #fffffc;
+  }
+
+  .utilbtn {
+    padding: 12px;
+    font-size: 16px;
+    margin: 16px;
+    font-family: 'Chilanka', cursive;
   }
   
   .container {
@@ -39,7 +48,6 @@ h2{
     box-shadow: 0 0 20px white;
     background-color: grey;
   }
-  
 
   /* button colors */
   .red {
@@ -81,7 +89,7 @@ h2{
 @media screen and (max-height: 650px) {
   #level-title {
     font-size: 1.5rem;
-    margin: 3%;
+    margin: 16px;
   }
 
   h2 { margin: 0; }

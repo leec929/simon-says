@@ -9,12 +9,20 @@
   <title>Simon</title>
   <link rel="stylesheet" href="game.css">
   <link href="https://fonts.googleapis.com/css?family=Press+Start+2P" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Chilanka&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Neucha&display=swap" rel="stylesheet">
 </head>
 
 <body>
   <h1 id="level-title">Press A Key to Start</h1>
   <h2 id = "endGame1"></h2>
   <h2 id = "endGame2"></h2>
+  <h2 id = "yourscore"></h2>
+
+  <div class="buttons">
+    <button type="button" class="utilbtn" id="playbtn">Start</button>
+    <button type="button" class="utilbtn" id="submitbtn" style="display:none;">Submit Score</button>
+  </div>
   
   <div class="container">
     <div lass="row">
@@ -42,6 +50,12 @@
     </div>
 
   </div>
+
+  <!-- action set by game.js -->
+  <form method="POST" style="display: none;" id="submitform">
+    <input type="hidden" name="score" id="score">
+    <input type="hidden" name="datetime" id="playdatetime">
+  </form>
 
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
   <script src="game.js" charset="utf-8"></script>
