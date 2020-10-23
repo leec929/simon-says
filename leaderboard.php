@@ -11,12 +11,21 @@
     <head>
         <title>Leaderboard</title>
         <meta charset="utf-8">
-        <!-- <link rel="stylesheet" href="start.css"> -->
+        <link rel="stylesheet" href="leaderboard.css">
+        <link href="https://fonts.googleapis.com/css?family=Press+Start+2P" rel="stylesheet">
+        <link href="https://fonts.googleapis.com/css2?family=Chilanka&display=swap" rel="stylesheet">
+        <link href="https://fonts.googleapis.com/css2?family=Neucha&display=swap" rel="stylesheet">
     </head>
     <body>
+        <h1>Simons Game Leaderboard</h1>
         <?php
+            function getInitial($initialInput) {
+                if($initialInput == "") 
+                    return "-";
+                return $initialInput;
+            }
             if(!empty($_POST)) { // sending a new score to add to the database
-                $initials = "{$_POST['first-initial']}{$_POST['second-initial']}{$_POST['third-initial']}";
+                $initials = getInitial($_POST['first-initial']) . getInitial($_POST['second-initial']) . getInitial($_POST['third-initial']); //"{$_POST['first-initial']}{$_POST['second-initial']}{$_POST['third-initial']}";
                 
                 $get_qry = "SELECT * FROM cwlee_game_leaderboard WHERE initials='$initials' AND score='{$_POST['score']}' AND '{$_POST['datetime']}'";
                 if ($result = $conn->query($get_qry)) {
@@ -36,20 +45,19 @@
                         // print("<br>result is \"$result\"");
 
                         if($result == 1) {
-                            print("<br> successfully entered the score!");
+                            print("<h3>successfully entered the score!</h3>");
                         }
                     }
                 }
             }
         ?>
-
         <table>
             <thead>
                 <tr>
-                    <td>rank</td>
+                    <td>Rank</td>
                     <td>Initials</td>
                     <td>Score</td>
-                    <td>Date Time</td>
+                    <td>Date & Time</td>
                 </tr>
             </thead>
             <tbody>
@@ -73,5 +81,8 @@ LONG;
                 ?>
             </tbody>
         </table>
+        <div class="btn-wrapper">
+            <button type="button" onclick="location.href='./start.html'">Return to Main Page</button>
+        </div>
     </body>
 </html>

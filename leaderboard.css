@@ -1,0 +1,42 @@
+h1 {
+    font-family: 'Press Start 2P', cursive;
+    font-size: 36px;
+    /* width: fit-content; */
+    /* margin: 10px auto; */
+    text-align: center;
+}
+
+h3 {
+    text-align: center;
+    color: #267226;
+    font-family: 'Chilanka', cursive;
+    font-size: 24px;
+}
+
+table {
+    margin: 0 auto;
+}
+
+td {
+    padding: 10px 12px;
+    text-align: center;
+    font-size: 20px;
+    font-family: 'Neucha', cursive;
+}
+
+thead tr td {
+    font-weight: bold;
+}
+
+button {
+    margin: 30px 10px 20px;
+    padding: 15px;
+    height: 70px;
+    font-size: 16px;
+    font-family: 'Chilanka', cursive;
+}
+
+.btn-wrapper {
+    margin: 0 auto;
+    width: fit-content;
+}
