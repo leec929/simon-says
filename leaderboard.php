@@ -62,7 +62,7 @@
             </thead>
             <tbody>
                 <?php
-                    $query = 'SELECT * FROM cwlee_game_leaderboard ORDER BY score DESC LIMIT 10;';
+                    $query = 'SELECT * FROM cwlee_game_leaderboard ORDER BY score DESC, playdatetime ASC LIMIT 30;';
                     $result = $conn->query($query);
                     $rankCount = 1;
                     if($result) {
