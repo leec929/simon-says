@@ -12,6 +12,7 @@
         <link href="https://fonts.googleapis.com/css2?family=Neucha&display=swap" rel="stylesheet">
     </head>
     <body>
+        <h1>Submit Score</h1>
         <?php
             if(!array_key_exists("score", $_POST)) {
                 echo <<<LONG
