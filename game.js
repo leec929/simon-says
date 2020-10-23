@@ -15,10 +15,16 @@ $(document).ready( function () {
     aspectButtons();
 }); // make the button height be equal to width at startup regardless of device
 
-$(document).keypress(function() { startGame(); })
+$(document).keypress(function() {
+    if(!started) {
+        startGame();
+    }
+})
 
 $("#playbtn").click(function() {
-    startGame();
+    if(!started) {
+        startGame();
+    }
 });
 
 function startGame() {
