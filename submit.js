@@ -1,5 +1,6 @@
+// make the cursor go to the next text input or previous input on key press, focus the first input to begin with
 // referenced https://stackoverflow.com/questions/15595652/focus-next-input-once-reaching-maxlength-value
-// but modified it because I know all children are input elements
+// but modified it because I know all children of "initials wrapper" are input elements
 if(document.getElementById("initials-wrapper")) {
     document.getElementById("first-initial").focus(); // always focus on first initial
     document.getElementById("initials-wrapper").onkeyup = function(event) {
@@ -10,6 +11,7 @@ if(document.getElementById("initials-wrapper")) {
         } else if(event.key == "ArrowLeft" && target.previousElementSibling != null) {
             target.previousElementSibling.focus(); // pressing left moves cursor to left
         } else {
+            // process alphabets or numbers, reject other inputs
             let isAlphaNumeral = ('0' <= event.key && event.key <= '9') || ('A' <= event.key && event.key <= 'Z') || (('a' <= event.key && event.key <= 'z'));
             if(!isAlphaNumeral) {
                 event.target.value = ""; // reject non-alphanumeric input
@@ -28,4 +30,5 @@ if(document.getElementById("initials-wrapper")) {
     console.log('Did not find the element with id "initial wrapper"');
 }
 
+// return takes you back to the start page
 document.getElementById("return-btn").addEventListener("click", function() {location.href="./start.html";})
