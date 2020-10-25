@@ -170,7 +170,6 @@ function getMySQLTime() {
  */
 $("#submitbtn").click(function() {
     $("#score").val(score);
-    let now = new Date();
     $("#playdatetime").val(getMySQLTime());
     $("#submitform").submit();
 });
