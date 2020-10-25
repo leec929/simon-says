@@ -67,15 +67,19 @@
                     $rankCount = 1;
                     if($result) {
                         while($row = $result->fetch_row()) {
-                            echo <<<LONG
-                <tr>
-                    <td>#${rankCount}</td>
-                    <td>{$row[0]}</td>
-                    <td>{$row[1]}</td>
-                    <td>{$row[2]}</td>
-                </tr>
-LONG;
-                    $rankCount++;
+                            echo "                <tr>";
+                            $inlineStyle = "";
+                            if(!empty($_POST)) {
+                                $initials = getInitial($_POST['first-initial']) . getInitial($_POST['second-initial']) . getInitial($_POST['third-initial']);
+                                if($row[0] == $initials && $row[1] == $_POST["score"] && $row[2] == $_POST['datetime'])
+                                    $inlineStyle = ' style="color: #267226;font-weight: bold;"';
+                            }
+                            echo "                    <td${inlineStyle}>#${rankCount}</td>";
+                            echo "                    <td${inlineStyle}>{$row[0]}</td>";
+                            echo "                    <td${inlineStyle}>{$row[1]}</td>";
+                            echo "                    <td${inlineStyle}>{$row[2]}</td>";
+                            echo "                </tr>";
+                            $rankCount++;
                         }
                     }
                 ?>
