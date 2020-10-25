@@ -1,3 +1,5 @@
+// created by steve Lee & Andy Hong - Oct 2020
+
 var buttonColors = ["green", "red", "cyan", "yellow", "ivory", "blue", "pink", "purple", "orange"];
 
 var gamePattern = [];
@@ -123,6 +125,7 @@ function playSound(name) {
     audio.play();
 }
 
+// reset game
 function startOver() {
     started = false; // finished
     score = level - 1; // current score = all levels passed - current level
@@ -132,15 +135,6 @@ function startOver() {
     $(".utilbtn").show(); // show restart and submit buttons
 }
 
-
-// what's the problem here? ts1005 "," expected
-// $(document).keypress(funciton() {
-//     if (!started) {
-//         $("#level-title").text("Level " + level);
-//         nextSequence();
-//         started = true;
-//     }
-// })
 
 /*
  * a function that ensures that the button height is equal to its width.
