@@ -61,7 +61,7 @@ function startGame() {
 }
 
 /*
- * TODO: comment
+ * When button is pressed, add the color to the sequence and check the sequence.
  * "wait" added to disallow users from clicking when next sequence is happening -- see checkAnswer() & nextSequence()
  */
 $(".btn").click(function() {
@@ -79,13 +79,13 @@ $(".btn").click(function() {
 function checkAnswer(currentLevel) {
     wait = 1; // checking and possibly moving to next sequence... don't allow clicking
     if (gamePattern[currentLevel] === userPattern[currentLevel]) {
-        if (userPattern.length === gamePattern.length){
+        if (userPattern.length === gamePattern.length){ // the level is done
             setTimeout(function() {
                 nextSequence();
             }, 1000);
-        } else
+        } else 
             wait = 0; // no reason to wait
-    } else{
+    } else{ // sequence[i] for user and game do not match
         playSound("wrong");
         $("body").addClass("game-over");
         $("#level-title").text("Game Over. Press Any Key to Restart");
@@ -100,14 +100,21 @@ function checkAnswer(currentLevel) {
     }
 }
 
+/*
+ * when a level is complete, this function is called to start the next sequence.
+ * It increases the level and chooses a random color to show the new button chosen.
+ */
 function nextSequence() {
-    userPattern = [];
+    userPattern = []; // reset the user sequence
+    //show next level
     level++;
     $("#level-title").text("Level " + level);
+    // choose a random button
     var randomNumber = Math.floor(Math.random() * 9);
     var randomChosenColor = buttonColors[randomNumber];
     gamePattern.push(randomChosenColor);
 
+    // show the next button
     $("#" + randomChosenColor).fadeIn(100).fadeOut(100).fadeIn(100);
     playSound(randomChosenColor);
     wait = 0; // done showing the next sqeuence, stop waiting.
