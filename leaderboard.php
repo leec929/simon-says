@@ -62,7 +62,7 @@
             </thead>
             <tbody>
                 <?php
-                    $query = 'SELECT * FROM cwlee_game_leaderboard ORDER BY score DESC, playdatetime ASC LIMIT 30;';
+                    $query = 'SELECT * FROM cwlee_game_leaderboard ORDER BY score DESC, playdatetime ASC;';
                     $result = $conn->query($query);
                     $rankCount = 1;
                     if($result) {
@@ -87,7 +87,9 @@
         </table>
         <div class="btn-wrapper">
             <button type="button" onclick="location.href='./start.html'">Return to Main Page</button>
+            <button type="button" id="load-more">Load More</button>
         </div>
+        <script src="leaderboard.js" charset="utf-8"></script>
     </body>
 </html>
 <?php
