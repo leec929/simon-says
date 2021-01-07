@@ -1,6 +1,3 @@
-<!-- TODO: Make game.html make a POST request with "score" and "datetime" (or primary id) inputs -->
-<!-- TODO: Style with CSS -->
-
 <!DOCTYPE html>
 <html>
     <head>
