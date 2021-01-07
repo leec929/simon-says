@@ -10,82 +10,86 @@ h2{
   font-family: 'Neucha', cursive;
 }
   
-  #level-title {
-    font-family: 'Press Start 2P', cursive;
-    font-size: 3rem;
-    margin: 5%;
-    color: #fffffc;
-  }
+#level-title {
+  font-family: 'Press Start 2P', cursive;
+  font-size: 3rem;
+  margin: 5%;
+  color: #fffffc;
+}
 
-  .utilbtn {
-    padding: 12px;
-    font-size: 16px;
-    margin: 16px;
-    font-family: 'Chilanka', cursive;
-  }
-  
-  .container {
-    display: block;
-    max-width: 100%;
-    margin: auto;
-  
-  }
-  
-  .btn {
-    margin: 25px;
-    display: inline-block;
-    height: 200px;
-    width: 200px;
-    border: 10px solid black;
-    border-radius: 20%;
-  }
-  
-  .game-over {
-    background-color: red;
-    opacity: 0.8;
-  }
+.utilbtn {
+  padding: 12px;
+  font-size: 16px;
+  margin: 16px;
+  font-family: 'Chilanka', cursive;
+}
 
-  .pressed {
-    box-shadow: 0 0 20px white;
-    background-color: grey;
-  }
+.container {
+  display: block;
+  max-width: 100%;
+  margin: auto;
+  user-select: none;
+  -moz-user-select: none;
+  -webkit-user-select: none;
+  -ms-user-select: none;
+  -khtml-user-select: none;
+}
 
-  /* button colors */
-  .red {
-    background-color: red;
-  }
-  
-  .green {
-    background-color: #48d80d;
-  }
-  
-  .blue {
-    background-color: blue;
-  }
-  
-  .cyan{
-      background-color: #00FFFF;
-  }
+.btn {
+  margin: 25px;
+  display: inline-block;
+  height: 200px;
+  width: 200px;
+  border: 10px solid black;
+  border-radius: 20%;
+}
 
-  .yellow {
-    background-color: yellow;
-  }
+.game-over {
+  background-color: red;
+  opacity: 0.8;
+}
 
-  .pink{
-      background-color: #ff0067;
-  }
+.pressed {
+  box-shadow: 0 0 20px white;
+  background-color: grey;
+}
 
-  .ivory{
-      background-color: #ffdfbb;
-  }
+/* button colors */
+.red {
+  background-color: red;
+}
 
-  .orange{
-      background-color: orange;
-  }
-  
-  .purple{
-      background-color: #b4a5ff;
-  }
+.green {
+  background-color: #48d80d;
+}
+
+.blue {
+  background-color: blue;
+}
+
+.cyan{
+    background-color: #00FFFF;
+}
+
+.yellow {
+  background-color: yellow;
+}
+
+.pink{
+    background-color: #ff0067;
+}
+
+.ivory{
+    background-color: #ffdfbb;
+}
+
+.orange{
+    background-color: orange;
+}
+
+.purple{
+    background-color: #b4a5ff;
+}
 
 @media screen and (max-height: 650px) {
   #level-title {
