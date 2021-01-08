@@ -141,6 +141,9 @@ function startOver() {
     $("#yourscore").text("Your score: " + score);
     $("#yourscore").show();
     $(".utilbtn").show(); // show restart and submit buttons
+    if(score == 0) {
+        $("#submitbtn").hide();
+    }
 }
 
 function getTwoDigits(num) { return ("0" + num).slice(-2); } // necessary for mysql datetime syntax?
