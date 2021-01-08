@@ -1,4 +1,4 @@
-// created by steve Lee & Andy Hong - Oct 2020
+// created by Steve Lee & Andy Hong - Oct 2020
 
 var buttonColors = ["green", "red", "cyan", "yellow", "ivory", "blue", "pink", "purple", "orange"];
 
@@ -18,7 +18,7 @@ var wait = 0; // to disable click event handler while nextsequence() is happenin
 $(document).ready( function () {
     $("#yourscore").hide();
     $("#submitform").attr("action", "http://comet.cs.brynmawr.edu/~cwlee/cs380-projects/submit-score.php");
-    aspectButtons(); // make the button height be equal to width at startup regardless of device
+    resizeButtons(); // resize the buttons to fit the screen during game play according to window size
 }); 
 
 /*
@@ -45,6 +45,7 @@ $("#playbtn").click(function() {
  * also hide the elements that should not show during game.
  */
 function startGame() {
+    resizeButtons();
     $("#endGame1").text("");
     $("#endGame2").text("");
     $("#yourscore").hide();
@@ -142,18 +143,6 @@ function startOver() {
     $(".utilbtn").show(); // show restart and submit buttons
 }
 
-
-/*
- * a function that ensures that the button height is equal to its width.
- */
-function aspectButtons() {
-    let buttons = document.querySelectorAll('.btn');
-    for(bttn of buttons) {
-        bttn.style.height = getComputedStyle(bttn).width;
-    }
-}
-window.addEventListener('resize', aspectButtons); // on window resize, to make the buttons 1:1 aspect ratio (squares)
-
 function getTwoDigits(num) { return ("0" + num).slice(-2); } // necessary for mysql datetime syntax?
 
 /*
@@ -173,3 +162,39 @@ $("#submitbtn").click(function() {
     $("#playdatetime").val(getMySQLTime());
     $("#submitform").submit();
 });
+
+/*
+ * a function that ensures that the button height is equal to its width.
+ */
+function resizeButtons() {
+    let header = document.getElementById('level-title');
+    let style = window.getComputedStyle(header);
+    let headerHeight = parseFloat(style.marginTop) + parseFloat(style.marginBottom) + parseFloat(style.height);
+    
+    const marginPerc = 0.015;
+    const borderPerc = marginPerc/2;
+    const btnPerc = (1-(6*marginPerc + 6*borderPerc))/3.2;
+    // console.log(`btnPerc = ${btnPerc}`);
+
+    let docElem = document.documentElement;
+    let body = document.getElementsByTagName('body')[0];
+    let width = body.clientWidth || window.innerWidth || docElem.clientWidth;
+    let height = window.innerHeight || docElem.clientHeight || body.clientHeight;
+
+    let remainHeight = height - headerHeight;
+    let shorter = Math.min(width, remainHeight);
+    // console.log(`remainingHeight ${remainHeight},  width = ${width}, shorter = ${shorter}`);
+
+    let btnSize = Math.floor(shorter * btnPerc);
+    let marginSize = Math.floor(shorter * marginPerc);
+    let borderWidth = Math.floor(shorter * borderPerc)
+    // console.log(`btnSize = ${btnSize}, marginSize = ${marginSize}`);
+
+    for(bttn of document.querySelectorAll('.btn')) {
+        bttn.style.height = btnSize + "px";
+        bttn.style.width = btnSize + "px";
+        bttn.style.margin = marginSize + "px";
+        bttn.style.borderWidth = borderWidth + "px";
+    }
+}
+window.addEventListener('resize', resizeButtons); // on window resize, resize the buttons
