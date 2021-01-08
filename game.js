@@ -17,7 +17,7 @@ var wait = 0; // to disable click event handler while nextsequence() is happenin
  */
 $(document).ready( function () {
     $("#yourscore").hide();
-    $("#submitform").attr("action", "http://comet.cs.brynmawr.edu/~cwlee/cs380-projects/submit-score.php");
+    $("#submitform").attr("action", "http://comet.cs.brynmawr.edu/~cwlee/simon-says/submit-score.php");
     resizeButtons(); // resize the buttons to fit the screen during game play according to window size
 }); 
 

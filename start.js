@@ -1,5 +1,5 @@
 // leaderboard always goes to comet since it's a php file
-document.getElementById("leader-button").addEventListener("click", function() {location.href="http://comet.cs.brynmawr.edu/~cwlee/cs380-projects/leaderboard.php";})
+document.getElementById("leader-button").addEventListener("click", function() {location.href="http://comet.cs.brynmawr.edu/~cwlee/simon-says/leaderboard.php";})
 
 // go to the game page when the start button is clicked
 document.getElementById("start-button").addEventListener("click", function() { location.href = "./game.html"; })

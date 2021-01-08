@@ -21,7 +21,7 @@ LONG;
             else {
                 echo <<<LONG
         <h2> Enter your initials </h2>
-        <form id="initials-wrapper" action="http://comet.cs.brynmawr.edu/~cwlee/cs380-projects/leaderboard.php" method="POST">
+        <form id="initials-wrapper" action="http://comet.cs.brynmawr.edu/~cwlee/simon-says/leaderboard.php" method="POST">
             <input type="text" maxlength="1" name="first-initial" id="first-initial" placeholder="-">
             <input type="text" maxlength="1" name="second-initial" placeholder="-">
             <input type="text" maxlength="1" name="third-initial" placeholder="-">
