@@ -1,9 +1,9 @@
 /* CSS for the Simons board */
 body {
-    text-align: center;
-    background-color: #264653;
-    touch-action: manipulation;
-  }
+  text-align: center;
+  background-color: #264653;
+  touch-action: manipulation;
+}
 
 h2{
   color: #fffffc;
