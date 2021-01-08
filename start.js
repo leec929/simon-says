@@ -31,3 +31,12 @@ function toggleInstructions() {
     }
     // visibility reference https://stackoverflow.com/questions/40446658/javascript-add-transition-between-displaynone-and-displayblock
 }
+
+// close the instructions when clicked outside
+addEventListener('click', function(e) {
+    if(e.target.id !== "how-button") {
+        if (!e.target.closest("#how-to")) {
+            document.getElementById('how-to-wrapper').style.visibility = "hidden";
+        }
+    }
+});
